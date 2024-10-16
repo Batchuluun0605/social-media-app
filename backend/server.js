@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
+import notificationRoutes from "./routes/notification.js";
 
 import connectMongoDb from "./db/connectMongoDb.js";
 import { v2 as cloudinary } from "cloudinary";
@@ -27,6 +28,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/notification", notificationRoutes);
 
 app.listen(PORT, () => {
   console.log(`server is running port: ${PORT} `);
