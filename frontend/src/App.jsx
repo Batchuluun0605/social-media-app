@@ -20,6 +20,7 @@ function App() {
         const data = await res.json();
 
         if (data.error) return null;
+
         if (!res.ok) {
           throw new Error(data.error || "Something went wrong");
         }
@@ -31,7 +32,7 @@ function App() {
         throw new Error(error);
       }
     },
-    retry: false,
+    // retry: false,
   });
   if (isLoading) {
     return (
