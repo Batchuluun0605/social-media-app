@@ -5,7 +5,7 @@ import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import notificationRoutes from "./routes/notification.js";
-
+import cors from "cors";
 import connectMongoDb from "./db/connectMongoDb.js";
 import { v2 as cloudinary } from "cloudinary";
 
@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
