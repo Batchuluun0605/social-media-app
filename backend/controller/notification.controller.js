@@ -20,7 +20,7 @@ export const getNotification = async (req, res) => {
 
 export const deleteNotifications = async (req, res) => {
   try {
-    const userId = req.user._id;
+    const userId = req.user.id;
 
     await Notification.deleteMany({ to: userId });
 
