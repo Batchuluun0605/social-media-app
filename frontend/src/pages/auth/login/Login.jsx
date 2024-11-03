@@ -4,6 +4,7 @@ import XSvg from "../../../components/svgs/X";
 import { MdOutlineMail } from "react-icons/md";
 import { MdPassword } from "react-icons/md";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { FaUser } from "react-icons/fa";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -56,7 +57,7 @@ const Login = () => {
           <XSvg className="w-24 lg:hidden fill-white" />
           <h1 className="text-4xl font-extrabold text-white">{"Let's"} go.</h1>
           <label className="input input-bordered rounded flex items-center gap-2">
-            <MdOutlineMail />
+            <FaUser />
             <input
               type="text"
               className="grow"
